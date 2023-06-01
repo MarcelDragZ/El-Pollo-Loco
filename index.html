@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smokum&display=swap" rel="stylesheet">
+    <script src="models/drawable-object.class.js"></script>
+    <script src="models/movable-object.class.js"></script>
+    <script src="models/character.class.js"></script>
+    <script src="models/chicken.class.js"></script>
+    <script src="models/smallChicken.class.js"></script>
+    <script src="models/bottle.class.js"></script>
+    <script src="models/coin.class.js"></script>
+    <script src="models/cloud.class.js"></script>
+    <script src="models/status-bar.class.js"></script>
+    <script src="models/status-bar-bottle.class.js"></script>
+    <script src="models/status-bar-coin.class.js"></script>
+    <script src="models/status-bar-end-boss-class.js"></script>
+    <script src="models/world.class.js"></script>
+    <script src="models/background-object.class.js"></script>
+    <script src="models/keyboard.class.js"></script>
+    <script src="models/level.class.js"></script>
+    <script src="models/throwable-object.class copy.js"></script>
+    <script src="models/endboss.class.js"></script>
+    <script src="levels/level1.js"></script>
+    <script defer src="js/game.js"></script>
+    <title>Él Pollo Lóco</title>
+</head>
+
+<body onload="init()">
+    <div class="game_section" id="game_section">
+        <h1>Él Pollo Lóco</h1>
+        <div class="canvas_container" id="test">
+            <div id="mobile_buttons" class="mobile_buttons d-none">
+                <div>
+                    <div id="character_left" class="mobile_key"><span>◄</span></div>
+                    <div id="character_right" class="mobile_key"><span> ►</span></div>
+                </div>
+                <div>
+                    <div id="character_jump" class="mobile_key"><span>Jump</span></div>
+                    <div id="character_throw" class="mobile_key"><span>Throw</span></div>
+                </div>
+            </div>
+            <canvas class="d-none" width="720" height="480" id="canvas"></canvas>
+        </div>
+        <div id="start_game_placeholder" class="start_game_placeholder d-none">
+            <div class="start_game_menu">
+                <div onclick="startGame()">►</div>
+                <div id="music_container" onclick="toggleMusic()"><img src="./img/10_backgrounds/no_audio.png"></div>
+                <div onclick="showKeybindings()">?</div>
+            </div>
+        </div>
+        <div id="turn_placeholder" class="turn_placeholder">
+            <div class="turn_phone">Turn your Phone</div>
+        </div>
+    </div>
+</body>
+
+</html>
